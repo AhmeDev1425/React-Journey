@@ -1,0 +1,21 @@
+{
+  "name": "react-manual-esbuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "esbuild src/main.jsx --bundle --servedir=. --outfile=bundle.js --loader:.jsx=jsx --loader:.js=jsx --sourcemap",
+    "build": "esbuild ./src/main.jsx --bundle --outfile=dist/bundle.js --minify --loader:.jsx=jsx --loader:.js=jsx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.0"
+  }
+}
