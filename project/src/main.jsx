@@ -11,21 +11,18 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Header />
     <div style={{display:"flex"}} >
-    <div className={"posts-container"} >
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-    </div>
-
-      <SideMenu>
-
-      </SideMenu>
+        <div className={"posts-container"} >
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+        </div>
+        <SideMenu name="Ahmed" />
     </div>
   </StrictMode>,
 )

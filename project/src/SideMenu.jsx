@@ -10,10 +10,10 @@ const sideStyle = {
 
 }
 
-function SideMenu() {
+function SideMenu({name}) {
     return(
         <div style={sideStyle}>
-            <h1>asdsa</h1>
+            <h1>{name}</h1>
             <h1>asdsa</h1>
             <h1>asdsa</h1>
             <h1>asdsa</h1>
