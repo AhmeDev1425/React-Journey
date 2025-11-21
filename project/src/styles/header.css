@@ -1,0 +1,9 @@
+.header{
+    background-color: teal;
+    height: 200px;
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0px 5px 13px rgba(0,0,0,0.4);
+} 
