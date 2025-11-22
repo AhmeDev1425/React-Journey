@@ -6,23 +6,25 @@ import './styles/index.css'
 import Post from './Post.jsx'
 import SideMenu from './SideMenu.jsx'
 import Header from './Header.jsx'
+const posts = [
+  { title: "ahmed", content: 1 },
+  { title: "ahmed2", content: 2 },
+  { title: "ahmed3", content: 3 },
+  { title: "ahmed4", content: 4 },
+];
+const postsList =  posts.map((p) => (
+  <Post key={p.title} title={p.title} content={p.content} />
+));
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Header />
     <div style={{display:"flex"}} >
         <div className={"posts-container"} >
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
+          {postsList}
         </div>
-        <SideMenu name="Ahmed" />
+        <SideMenu/>
     </div>
   </StrictMode>,
 )

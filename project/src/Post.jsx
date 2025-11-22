@@ -5,15 +5,15 @@ const postTitle = {
 }
 
 
-function Post() {
+function Post(props) {
     
     return (
     <>
         <div className={"post"}>
-            <h5 className={postTitle}> anything</h5>
+            <h5 className={postTitle}> {props.title}</h5>
                 <hr/>
             <p style={{color:" rgba(0, 0, 0, 0.5)"}}>
-                anything
+                {props.content}
             </p>
         </div>
 

@@ -10,23 +10,33 @@ const sideStyle = {
 
 }
 
-function SideMenu({name}) {
+function SideMenu({name, children}) {
+    const child = children;
     return(
-        <div style={sideStyle}>
-            <h1>{name}</h1>
-            <h1>asdsa</h1>
-            <h1>asdsa</h1>
-            <h1>asdsa</h1>
-            <h1>asdsa</h1>
-            <h1>asdsa</h1>
-            <h1>asdsa</h1>
-            <h1>asdsa</h1>
-            <h1>asdsa</h1>
-            <h1>asdsa</h1>
-            <h1>asdsa</h1>
-            <h1>asdsa</h1>
-            <h1>asdsa</h1>
-        </div>
+        <>
+
+            <div>
+                {child}
+            </div>
+
+
+            <div style={sideStyle}>
+                <h1>{name}</h1>
+                <h1>asdsa</h1>
+                <h1>asdsa</h1>
+                <h1>asdsa</h1>
+                <h1>asdsa</h1>
+                <h1>asdsa</h1>
+                <h1>asdsa</h1>
+                <h1>asdsa</h1>
+                <h1>asdsa</h1>
+                <h1>asdsa</h1>
+                <h1>asdsa</h1>
+                <h1>asdsa</h1>
+                <h1>asdsa</h1>
+            </div>
+
+        </>
     )
     
 }
