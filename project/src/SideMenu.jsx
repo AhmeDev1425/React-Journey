@@ -9,7 +9,7 @@ const sideStyle = {
 
 
 }
-
+import NameInput from "./NameInput"
 function SideMenu({name, children}) {
     const child = children;
     return(
@@ -19,8 +19,10 @@ function SideMenu({name, children}) {
                 {child}
             </div>
 
-
             <div style={sideStyle}>
+            <div>
+                <NameInput/>
+            </div>
                 <h1>{name}</h1>
                 <h1>asdsa</h1>
                 <h1>asdsa</h1>

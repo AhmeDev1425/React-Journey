@@ -2,9 +2,8 @@ import { useState } from "react"
 let name = "Asad"
 
 function Button() {
-    const state =  useState(name)
-    const value =  state[0]
-    const setValue =  state[1]
+    const [value, setValue] =  useState(name)
+
 
     function buttonClicker() {
         if (value === 'Asad') {
