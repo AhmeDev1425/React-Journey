@@ -1,21 +1,27 @@
 import { useState } from "react"
 
 function MyForm(){
-    const [getN, setN] = useState("")
-    const [getE, setE] = useState("")
+    const [getFormData, setFormData] = useState({
+        name:"",
+        email:""
+
+    })
     return (
         <>
             <form>
                     <label>Name: </label>
                     <input type="text"
-                    value={getN}
-                        onChange={(e)=> {setN(e.target.value)}}
-                         />
+                        value={getFormData.name}
+                        onChange={(e)=> {setFormData({name:e.target.value, email:getFormData.email})}}
+                        />
+
                     <label>Email: </label>
-                    <input
-                        value={getE}
-                        onChange={(e)=> {setE(e.target.value)}}
-                    type="text" />
+
+                    <input type="text"
+                        value={getFormData.email}
+                        onChange={(e)=> {setFormData({email:e.target.value, name:getFormData.name})}}
+                        />
+
                 <button type="submit">submit</button>
             </form>
         </>
