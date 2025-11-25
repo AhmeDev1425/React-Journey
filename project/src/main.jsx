@@ -7,7 +7,7 @@ import Post from './Post.jsx'
 import SideMenu from './SideMenu.jsx'
 import Header from './Header.jsx'
 import Button from './Button.jsx'
-
+import CounterTask from './CounterTask.jsx'
 const posts = [
   { title: "ahmed", content: 1 },
   { title: "ahmed2", content: 2 },
@@ -27,6 +27,7 @@ createRoot(document.getElementById('root')).render(
         <div className={"posts-container"} >
           {postsList}
         </div>
+        <CounterTask/>
         <SideMenu/>
     </div>
   </StrictMode>,
