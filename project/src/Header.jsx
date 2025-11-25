@@ -1,5 +1,5 @@
 import './styles/header.css'
-
+import MyForm from './MyForm'
 const headerTitle = {
     color:"white",
     // backgroundColor:"yellow",
@@ -14,7 +14,9 @@ function Header() {
                 <h1 style={headerTitle}> 
                     PostsApp
                 </h1>
-
+            </div>
+            <div>
+                <MyForm/>
             </div>
         </>
     )
