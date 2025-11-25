@@ -1,4 +1,5 @@
 import { useState } from "react"
+import SelectButtons from "./SelectButton";
 import RadioButtons from "./RadioButton";
 
 
@@ -11,6 +12,7 @@ function MyForm(){
     return (
         <>
             <form>
+                <SelectButtons/>
                 <RadioButtons/>
                     <label>Name: </label>
                     <input type="text"
