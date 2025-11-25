@@ -13,9 +13,7 @@ function MyForm(){
                     <input type="text"
                         value={getFormData.name}
                         onChange={(e)=> {
-                            const newData = {...getFormData};
-                            newData.name = e.target.value;
-                            setFormData(newData);
+                            setFormData({...getFormData, name : e.target.value});
                         }}
                         />
 
@@ -24,9 +22,7 @@ function MyForm(){
                     <input type="text"
                         value={getFormData.email}
                         onChange={(e)=> {
-                            const newData = {...getFormData};
-                            newData.email = e.target.value;
-                            setFormData(newData);
+                            setFormData({...getFormData, email : e.target.value});
                             }}
                         />
 
