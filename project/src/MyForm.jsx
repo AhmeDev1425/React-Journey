@@ -1,4 +1,6 @@
 import { useState } from "react"
+import RadioButtons from "./RadioButton";
+
 
 function MyForm(){
     const [getFormData, setFormData] = useState({
@@ -9,6 +11,7 @@ function MyForm(){
     return (
         <>
             <form>
+                <RadioButtons/>
                     <label>Name: </label>
                     <input type="text"
                         value={getFormData.name}
@@ -18,7 +21,6 @@ function MyForm(){
                         />
 
                     <label>Email: </label>
-
                     <input type="text"
                         value={getFormData.email}
                         onChange={(e)=> {
