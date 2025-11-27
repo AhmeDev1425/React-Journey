@@ -1,33 +1,46 @@
 import { useState } from "react"
 
-export default function Appender(){
+export default function Appender() {
 
-    const [getNames, setNames] = useState( ["Ahmed","Ali","mohamed"])
-    
-    const namesList = getNames.map((name)=> {
-        return <li>{name}</li>
-    }) 
-    
-    const [getInputNames, setInputNames] = useState()
-    
+    const [names, setNames] = useState([
+        { id: 1, name: "Ahmed" },
+        { id: 2, name: "Ali" },
+        { id: 3, name: "Mohamed" }
+    ])
 
-    function handleDevices() {
-        setNames([...getNames,getInputNames ])
+    const [inputName, setInputName] = useState("")
+
+    const nextId = names.length > 0 ? Math.max(...names.map(n => n.id)) + 1 : 1
+
+    function handleAdd() {
+        if (!inputName.trim()) return;
+
+        setNames([...names, { id: nextId, name: inputName }])
+        setInputName("")
+    }
+
+    function handleDelete(id) {
+        setNames(names.filter(n => n.id !== id))
     }
 
     return (
-        <>
-            <div>
-                <ul>
-                    {namesList}
-                </ul>
+        <div>
+            <ul>
+                {names.map((n) => (
+                    <li key={n.id}>
+                        {n.name}
+                        <button onClick={() => handleDelete(n.id)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
 
-                <input value={getInputNames} onChange={(e)=> { setInputNames(e.target.value) } } type="text" />setName
+            <input
+                type="text"
+                value={inputName}
+                onChange={(e) => setInputName(e.target.value)}
+            />
 
-                <button onClick={handleDevices}>add</button>
-
-            </div>
-        </>
+            <button onClick={handleAdd}>Add</button>
+        </div>
     )
-
-    }
+}
