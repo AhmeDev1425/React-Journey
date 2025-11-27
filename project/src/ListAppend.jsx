@@ -12,9 +12,7 @@ export default function Appender(){
     
 
     function handleDevices() {
-        const newNames = [...getNames]
-        newNames.push(getInputNames)
-        setNames(newNames)
+        setNames([...getNames,getInputNames ])
     }
 
     return (
