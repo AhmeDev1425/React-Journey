@@ -22,6 +22,18 @@ export default function Appender() {
     function handleDelete(id) {
         setNames(names.filter(n => n.id !== id))
     }
+    
+function handleEdit(id) {
+    const updated = names.map((el) => {
+        if (el.id === id) {
+            return { ...el, name: el.name + "0" }
+        }
+        return el
+    })
+
+    setNames(updated)
+}
+
 
     return (
         <div>
@@ -30,6 +42,7 @@ export default function Appender() {
                     <li key={n.id}>
                         {n.name}
                         <button onClick={() => handleDelete(n.id)}>Delete</button>
+                        <button onClick={() => handleEdit(n.id)}>Edit</button>
                     </li>
                 ))}
             </ul>
