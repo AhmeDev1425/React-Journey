@@ -1,4 +1,5 @@
 import './styles/header.css'
+import Appender from "./ListAppend"
 import MyForm from './MyForm'
 const headerTitle = {
     color:"white",
@@ -18,6 +19,10 @@ function Header() {
             <div>
                 <MyForm/>
             </div>
+        <div>
+            <Appender/>
+        </div>
+
         </>
     )
     
