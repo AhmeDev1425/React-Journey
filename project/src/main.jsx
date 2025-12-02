@@ -8,6 +8,7 @@ import SideMenu from './SideMenu.jsx'
 import Header from './Header.jsx'
 import Button from './Button.jsx'
 import CounterTask from './CounterTask.jsx'
+import { BrowserRouter } from 'react-router-dom'
 const posts = [
   { title: "ahmed", content: 1 },
   { title: "ahmed2", content: 2 },
@@ -20,7 +21,9 @@ const postsList =  posts.map((p) => (
 ));
 
 createRoot(document.getElementById('root')).render(
+
   <StrictMode>
+    <BrowserRouter>
     <Button />
     <Header />
     <div style={{display:"flex"}} >
@@ -30,5 +33,6 @@ createRoot(document.getElementById('root')).render(
         <CounterTask/>
         <SideMenu/>
     </div>
+    </BrowserRouter>
   </StrictMode>,
 )
