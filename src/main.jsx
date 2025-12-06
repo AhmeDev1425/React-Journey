@@ -8,31 +8,39 @@ import SideMenu from './SideMenu.jsx'
 import Header from './Header.jsx'
 import Button from './Button.jsx'
 import CounterTask from './CounterTask.jsx'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Link } from 'react-router-dom'
+
 const posts = [
   { title: "ahmed", content: 1 },
   { title: "ahmed2", content: 2 },
   { title: "ahmed3", content: 3 },
   { title: "ahmed4", content: 4 },
 ];
-
 const postsList =  posts.map((p) => (
   <Post key={p.title} title={p.title} content={p.content} />
 ));
 
 createRoot(document.getElementById('root')).render(
 
+
   <StrictMode>
     <BrowserRouter>
-    <Button />
-    <Header />
-    <div style={{display:"flex"}} >
-        <div className={"posts-container"} >
-          {postsList}
-        </div>
-        <CounterTask/>
-        <SideMenu/>
-    </div>
+      <div>
+        <Link to = "/appendar">
+          <button >show appender</button>
+          <h1>got to appender</h1>
+        </Link>
+      </div>
+      <Button />
+      <Header />
+      <div style={{display:"flex"}} >
+          <div className={"posts-container"} >
+            {postsList}
+          </div>
+          <CounterTask/>
+          <SideMenu/>
+      </div>
     </BrowserRouter>
   </StrictMode>,
 )
+

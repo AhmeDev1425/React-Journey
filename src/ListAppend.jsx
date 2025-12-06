@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { useParams } from "react-router-dom"
+import { ContData } from './Contexts.jsx'
 
 export default function Appender() {
 
@@ -7,6 +9,9 @@ export default function Appender() {
         { id: 2, name: "Ali" },
         { id: 3, name: "Mohamed" }
     ])
+    const data = useContext(ContData); 
+    let {id} = useParams();
+    // const ns = data.find((n)=> n.id)
 
     const [inputName, setInputName] = useState("")
 
@@ -36,7 +41,7 @@ function handleEdit(id) {
 
 
     return (
-        <div>
+        <div style={{backgroundColor:'yellow'}}>
             <ul>
                 {names.map((n) => (
                     <li key={n.id}>
@@ -46,6 +51,12 @@ function handleEdit(id) {
                     </li>
                 ))}
             </ul>
+                <p>Route param: {id}</p>
+
+                <div>
+                    <p>Context ID: {data.id}</p>
+                    <p>Context Name: {data.name}</p>
+                </div>
 
             <input
                 type="text"

@@ -9,6 +9,7 @@ const sideStyle = {
 
 
 }
+
 import NameInput from "./NameInput"
 function SideMenu({name, children}) {
     const child = children;
