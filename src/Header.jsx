@@ -3,7 +3,7 @@ import Appender from "./ListAppend"
 import MyForm from './MyForm'
 import { Route, Routes } from 'react-router-dom'
 import { ContData } from './Contexts.jsx'
-
+import Send from './Materials/Send.jsx'
 const headerTitle = {
     color:"white",
     // backgroundColor:"yellow",
@@ -26,6 +26,9 @@ function Header() {
                         <div>
                             <MyForm/>
                         </div>
+                    </div>
+                    <div>
+                        <Send/>
                     </div>
                     
             <Routes>
